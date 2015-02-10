@@ -9,3 +9,10 @@ pom.xml.asc
 /.nrepl-port
 .hgignore
 .hg/
+
+.idea
+*.iml
+sessions
+*.xls
+*.xlsx
+config.edn

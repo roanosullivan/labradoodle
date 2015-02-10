@@ -1,0 +1,2 @@
+{:gitlab {:url "https://gitlab.example.com"
+          :private-token "1a2b3c5d8e13f21g"}}
