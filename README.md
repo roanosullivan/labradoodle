@@ -2,8 +2,7 @@
 
 Gitlab API utilites.
 
-Currently just supports exporting issues from a project into an Excel workbook called
-"punchlist.xlsx".
+Currently just supports exporting issues from a project into an Excel workbook called "punchlist.xlsx".
 
 Built using "org.gitlab/java-gitlab-api" and "dk.ative/docjure".
 
