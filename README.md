@@ -1,36 +1,38 @@
-# labradoodle
+# Labradoodle
 
-FIXME: description
+Gitlab API utilites.
+
+Currently just supports exporting issues from a project into an Excel workbook called
+"punchlist.xlsx".
+
+Built using "org.gitlab/java-gitlab-api" and "dk.ative/docjure".
 
 ## Installation
 
-Download from http://example.com/FIXME.
+ 1. Download source from https://github.com/roanosullivan/labradoodle
+ 2. Copy config.edn.sample to config.edn
+ 3. Edit config.edn
+    * replace :url value with your Gitlab URL
+    * replace :private-token value with your Gitlab private token, which should be listed on your
+    [Profile](https://gitlab.gitters.cgifederal.com/profile/account) page.
 
 ## Usage
 
-FIXME: explanation
+Using bash script from command line:
 
-    $ java -jar labradoodle-0.1.0-standalone.jar [args]
+    $ ./scripts/export-punchlist.sh "foo"
+    $ open punchlist.xlsx
 
-## Options
+From REPL:
 
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+    $ lein repl
+    labradoodle.core=> (export-punchlist "foo")
+    labradoodle.core=> CTRL-D
+    $ open punchlist.xlsx
 
 ## License
 
-Copyright © 2015 FIXME
+Copyright © 2015 Roan O'Sullivan
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.

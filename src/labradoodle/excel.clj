@@ -120,26 +120,6 @@
         (into (vector {:group "Misc"}))
         (into misc))))
 
-(defn group-fixed-rows [rows]
-  "Groups rows by labels: dev, ops, demo, docs. Include any ungrouped rows under a misc group."
-  {:deprecated "This fn hardcodes the groups; use the more flexible group-rows fn instead."}
-  (let [dev (filter #(has-label? "dev" %) rows)
-        ops (filter #(has-label? "ops" %) rows)
-        demo (filter #(has-label? "demo" %) rows)
-        docs (filter #(has-label? "docs" %) rows)
-        misc (filter #(not (any-label? #{"dev", "ops", "demo", "docs"} %)) rows)]
-    (-> []
-        (into (vector {:group "Development"}))
-        (into dev)
-        (into (vector {:group "Ops"}))
-        (into ops)
-        (into (vector {:group "Demo Prep"}))
-        (into demo)
-        (into (vector {:group "Documentation"}))
-        (into docs)
-        (into (vector {:group "Misc"}))
-        (into misc))))
-
 (defn issues->celldata [issues]
   "Create celldata array, with shape like this:
   [[\"Name\" \"Price\"]

@@ -1,7 +1,7 @@
 (defproject labradoodle "0.1.0-SNAPSHOT"
 
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "Gitlab API Utilities"
+  :url "http://github.com/roanosullivan/labradoodle"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
@@ -9,9 +9,10 @@
 
                  [dk.ative/docjure "1.7.0"]
 
-                 ; YIKES! 1.1.4 is the latest version deployed to Maven Central; need to manually build/install 1.1.8-SNAPSHOT from
-                 ; YIKES! .. https://github.com/roanosullivan/java-gitlab-api (forked from https://github.com/timols/java-gitlab-api
-                 ; YIKES! .. to fix issues linked from https://github.com/timols/java-gitlab-api/pull/46)
+                 ; YIKES! 1.1.4 is the latest version deployed to Maven Central; need to manually build/install
+                 ; YIKES! .. 1.1.8-SNAPSHOT from https://github.com/roanosullivan/java-gitlab-api (forked from
+                 ; YIKES! .. https://github.com/timols/java-gitlab-api to fix issues linked from
+                 ; YIKES! .. https://github.com/timols/java-gitlab-api/pull/46)
                  [org.gitlab/java-gitlab-api "1.1.8-SNAPSHOT"]
 
                  ; HUH? Is there a benefit to working with objects from "org.gitlab.api.models.*" package? Introduced

@@ -48,6 +48,6 @@
   (let [api (connect)]
     (.getIssues api proj)))
 
-(defn print-proto2-issues []
-  "An example of how labradoodle.gitlab functions can be composed to get back proto2 issues as EDN."
+(defn print-proj1-issues []
+  "An example of how labradoodle.gitlab functions can be composed to get back project issues as EDN."
   (pp/pprint (from-java (issues (project 1)))))
